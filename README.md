@@ -20,12 +20,11 @@
     
 >生产使用： 
 
-***
-    
->还要在config.py那里把你的mysql用户名和密码输入（那个是我开发版本的mysql用户名和密码，懒得改了= =） ，这样sqlalchemy才能连上数据库   
-    
-    
     create database myflasky;
+
+>还要在config.py那里把你的mysql用户名和密码输入（那个是我开发版本的mysql用户名和密码，懒得改了= =） ，这样sqlalchemy才能连上数据库  
+
+***
 
     python manage.py shell
   
