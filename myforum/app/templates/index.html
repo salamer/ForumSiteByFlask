@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block title %}flask page notfound{% endblock %}
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
+
+{% endblock %}
+
+{% block page_content %}
+
+<h1>    
+    Hello,{% if current_user.is_authenticated() %}
+        {{ current_user.username }}
+        {% else %}
+    stranger!
+        {% endif %}       
+</h1>
+<div>
+    {% if current_user.can(Permission.WRITE_ARTICLES) %}
+    {{ wtf.quick_form(form) }}
+    {% endif %}
+</div>
+{% include '_posts.html' %}
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination,'.index') }}
+</div>
+{% endif %}
+            
+{% endblock %}
+    

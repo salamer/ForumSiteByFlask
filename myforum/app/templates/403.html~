@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}hello{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>you have no permission</h1>
+</div>
+{% endblock %}
