@@ -22,17 +22,24 @@
 
     create database myflasky;
 
->还要在config.py那里把你的mysql用户名和密码输入（那个是我开发版本的mysql用户名和密码，懒得改了= =） ，这样sqlalchemy才能连上数据库  
+>还要在config.py那里把你的mysql用户名和密码输入（那个是我开发版本的mysql用户名和密码，懒得改了= =） ，这样sqlalchemy才能连上数据库,把root改成你的mysql用户名,  把960219改成你的mysql的密码
 
 ***
 
     python manage.py shell
+
+>在命令行里面操作
+
   
     db.create_all()
 
->建立数据
+>初始化数据
   
     Role.insert_roles()
+
+>推出命令行
+  
+    exit()
   
 >建立用户role的角色的初始化数据库
   
